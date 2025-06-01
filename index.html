@@ -1,81 +1,100 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Mohamed MED LEMINE BEDINE – Portfolio</title>
-  <img src="cheybte.jpg" alt="Photo de profil" width="200" style="border-radius: 10px;">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Bootstrap CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohamed MED LEMINE BEDINE</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    .photo-profil {
-      width: 180px;
-      border-radius: 50%;
-      border: 4px solid #0d6efd;
-      margin-bottom: 15px;
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      text-align: center;
     }
-    .section {
-      padding: 40px 0;
+    .bg-cover {
+      background-image: url('background.jpg'); /* Remplace par ton image */
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .nav-buttons a {
+      border: 1px solid white;
+      padding: 10px 30px;
+      margin: 10px;
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      transition: all 0.3s ease;
+    }
+    .nav-buttons a:hover {
+      background-color: white;
+      color: black;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      font-size: 24px;
+      color: white;
+    }
+    section {
+      padding: 60px 20px;
+      display: none;
+    }
+    #intro img {
+      width: 200px;
+      border-radius: 50%;
+      margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
-
-  <div class="container text-center mt-5">
-    <img src="moi.jpg" alt="Ma photo de profil" class="photo-profil">
-    <h1 class="mt-3">Mohamed MED LEMINE BEDINE</h1>
-    <p class="lead">Élève ingénieur en Statistique & Ingénierie des Données</p>
-    <p>
-      📧 <a href="mailto:23086@esp.mr">23086@esp.mr</a> |
-      📞 +222 36871887 |
-      🌍 <a href="https://www.linkedin.com/in/mohamed-medlemine-bedine-43893523b/" target="_blank">LinkedIn</a>
-    </p>
+  <div class="bg-cover">
+    <h1>MOHAMED MED LEMINE BEDINE</h1>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/mohamed-medlemine-bedine-43893523b/" target="_blank">🔗</a>
+      <a href="https://github.com/ton-pseudo" target="_blank">🐙</a>
+      <a href="#cv">📄</a>
+    </div>
+    <div class="nav-buttons">
+      <a href="#" onclick="showSection('intro')">INTRO</a>
+      <a href="#" onclick="showSection('projects')">PROJECTS</a>
+      <a href="#" onclick="showSection('cv')">CV</a>
+    </div>
+    <p class="mt-4">Reach me at <a href="mailto:23086@esp.mr" style="color: white;">23086@esp.mr</a></p>
   </div>
 
-  <div class="container section">
-    <h2 class="text-primary">🎓 Formation</h2>
-    <ul class="list-group">
-      <li class="list-group-item">ESP Nouakchott – Statistique et Ingénierie des Données (2023 - Présent)</li>
-      <li class="list-group-item">IPGEI – Concours National des Ingénieurs (2020 - 2023)</li>
-      <li class="list-group-item">Baccalauréat Sciences Mathématiques – Lycée Nouadhibou 3 (2020)</li>
+  <section id="intro">
+    <img src="cheybe.jpg" alt="Ma photo">
+    <h2>À propos de moi</h2>
+    <p>Je suis un élève ingénieur passionné par la data science, le traitement des données, et le développement de projets innovants mêlant statistiques, IA et technologie. Mon objectif est de créer des solutions utiles pour le développement durable en Mauritanie.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Mes projets</h2>
+    <ul class="list-group container">
+      <li class="list-group-item">🔍 Assistant IA pour l’agriculture mauritanienne – Python, RAG</li>
+      <li class="list-group-item">📊 Plateforme INPC avec Django + Docker</li>
+      <li class="list-group-item">🚜 Véhicule intelligent agricole – Arduino, Flutter</li>
     </ul>
-  </div>
+  </section>
 
-  <div class="container section">
-    <h2 class="text-primary">💼 Expériences</h2>
-    <ul class="list-group">
-      <li class="list-group-item">
-        <strong>SNIM</strong> – Stage Découverte (2024)  
-        <br>Département des achats : gestion des approvisionnements
-      </li>
-      <li class="list-group-item">
-        <strong>Projet Django – ESP</strong> (2024)  
-        <br>Plateforme de traitement de données géostatistiques avec visualisation interactive
-      </li>
-    </ul>
-  </div>
+  <section id="cv">
+    <h2>Mon CV</h2>
+    <p>Téléchargez mon CV en PDF :</p>
+    <a class="btn btn-primary" href="mon-cv.pdf" target="_blank">Télécharger le CV</a>
+  </section>
 
-  <div class="container section">
-    <h2 class="text-primary">🧪 Projets académiques</h2>
-    <ul class="list-group">
-      <li class="list-group-item">🔬 Assistant IA pour encyclopédie agricole – Python, RAG</li>
-      <li class="list-group-item">📈 Site web INPC avec Django et Docker</li>
-      <li class="list-group-item">🚜 Véhicule autonome pour collecte de données agricoles – Flutter, Arduino</li>
-    </ul>
-  </div>
-
-  <div class="container section">
-    <h2 class="text-primary">🧠 Compétences</h2>
-    <p><strong>Langages :</strong> Python, R, C++, HTML/CSS, SQL, Scala</p>
-    <p><strong>Technologies :</strong> Django, Flask, Spark, MongoDB, Git, Docker</p>
-    <p><strong>Soft Skills :</strong> Leadership, Travail d'équipe, Communication, Résolution de problèmes</p>
-  </div>
-
-  <footer class="text-center py-4 text-muted">
-    &copy; 2025 Mohamed Med Lemine Bedine. Tous droits réservés.
-  </footer>
-
-  <!-- Bootstrap JS (optionnel pour les composants interactifs) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+      window.scrollTo(0, document.getElementById(id).offsetTop);
+    }
+  </script>
 </body>
 </html>
