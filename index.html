@@ -5,93 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mohamed MED LEMINE BEDINE</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    body, html {
-      height: 100%;
-      margin: 0;
+    body {
       font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #000000a0, #000000a0), url('photo/cheybe.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: white;
       text-align: center;
+      padding-top: 50px;
     }
-    .bg-cover {
-      background-image: url('background.jpg'); /* Remplace par ton image */
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    .nav-buttons a {
-      border: 1px solid white;
-      padding: 10px 30px;
-      margin: 10px;
-      display: inline-block;
-      text-decoration: none;
-      color: white;
-      transition: all 0.3s ease;
-    }
-    .nav-buttons a:hover {
-      background-color: white;
-      color: black;
-    }
-    .social-icons a {
-      margin: 0 10px;
-      font-size: 24px;
-      color: white;
+    .btn-outline-light {
+      margin: 5px;
     }
     section {
-      padding: 60px 20px;
+      padding: 60px 0;
       display: none;
+      background-color: #111111ee;
     }
-    #intro img {
-      width: 200px;
+    img.profile {
       border-radius: 50%;
-      margin-bottom: 20px;
+      width: 180px;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-  <div class="bg-cover">
-    <h1>MOHAMED MED LEMINE BEDINE</h1>
-    <div class="social-icons">
-      <a href="https://www.linkedin.com/in/mohamed-medlemine-bedine-43893523b/" target="_blank">🔗</a>
-      <a href="https://github.com/ton-pseudo" target="_blank">🐙</a>
-      <a href="#cv">📄</a>
-    </div>
-    <div class="nav-buttons">
-      <a href="#" onclick="showSection('intro')">INTRO</a>
-      <a href="#" onclick="showSection('projects')">PROJECTS</a>
-      <a href="#" onclick="showSection('cv')">CV</a>
-    </div>
-    <p class="mt-4">Reach me at <a href="mailto:23086@esp.mr" style="color: white;">23086@esp.mr</a></p>
+
+  <h1 class="display-4">MOHAMED MED LEMINE BEDINE</h1>
+  <p class="lead">Élève ingénieur en Statistique & Data Engineering</p>
+
+  <div>
+    <a href="https://www.linkedin.com/in/mohamed-medlemine-bedine-43893523b/" class="btn btn-outline-light" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/ton-pseudo" class="btn btn-outline-light" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="#cv" class="btn btn-outline-light" onclick="showSection('cv')"><i class="fas fa-file-alt"></i></a>
   </div>
 
+  <div class="mt-4">
+    <a href="#" onclick="showSection('intro')" class="btn btn-outline-light">Intro</a>
+    <a href="#" onclick="showSection('projects')" class="btn btn-outline-light">Projects</a>
+    <a href="#" onclick="showSection('cv')" class="btn btn-outline-light">CV</a>
+  </div>
+
+  <p class="mt-4">Reach me at <a href="mailto:23086@esp.mr" style="color: white;">23086@esp.mr</a></p>
+
   <section id="intro">
-    <img src="cheybe.jpg" alt="Ma photo">
-    <h2>À propos de moi</h2>
-    <p>Je suis un élève ingénieur passionné par la data science, le traitement des données, et le développement de projets innovants mêlant statistiques, IA et technologie. Mon objectif est de créer des solutions utiles pour le développement durable en Mauritanie.</p>
+    <img src="photo/my_1.jpg" alt="Ma photo" class="profile">
+    <h2 class="mt-3">À propos de moi</h2>
+    <p>Élève ingénieur à l'ESP Nouakchott, passionné par les données, l'IA et l'agriculture intelligente. Je combine mon savoir en data science avec des projets réels dans le but de contribuer au développement durable en Mauritanie.</p>
   </section>
 
   <section id="projects">
-    <h2>Mes projets</h2>
+    <h2>Projets Académiques</h2>
     <ul class="list-group container">
-      <li class="list-group-item">🔍 Assistant IA pour l’agriculture mauritanienne – Python, RAG</li>
-      <li class="list-group-item">📊 Plateforme INPC avec Django + Docker</li>
-      <li class="list-group-item">🚜 Véhicule intelligent agricole – Arduino, Flutter</li>
+      <li class="list-group-item bg-dark text-white">🔍 Assistant IA pour agriculture – RAG, Python</li>
+      <li class="list-group-item bg-dark text-white">📊 Plateforme Django pour INPC (Indice Prix)</li>
+      <li class="list-group-item bg-dark text-white">🚜 Véhicule connecté – Arduino + capteurs</li>
+      <li class="list-group-item bg-dark text-white">
+        <img src="photo/my_2.jpg" class="img-fluid mt-2" alt="Projet visuel">
+      </li>
     </ul>
   </section>
 
   <section id="cv">
     <h2>Mon CV</h2>
-    <p>Téléchargez mon CV en PDF :</p>
-    <a class="btn btn-primary" href="mon-cv.pdf" target="_blank">Télécharger le CV</a>
+    <p>Vous pouvez consulter ou télécharger mon CV ici :</p>
+    <a class="btn btn-primary" href="mon-cv.pdf" target="_blank">Télécharger mon CV PDF</a>
   </section>
 
   <script>
     function showSection(id) {
-      document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
+      document.querySelectorAll('section').forEach(s => s.style.display = 'none');
       document.getElementById(id).style.display = 'block';
       window.scrollTo(0, document.getElementById(id).offsetTop);
     }
